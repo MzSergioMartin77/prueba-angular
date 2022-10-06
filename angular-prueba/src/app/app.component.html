@@ -1,0 +1,33 @@
+
+<div class="container">
+  <h1>{{title}}</h1>
+
+  <div>
+    <button class="col" (click)="listEnteros()">Pregunta 1</button>
+    <button class="col" (click)="numImpar()">Pregunta 2</button>
+    <button class="col" (click)="op = '3'">Pregunta 3</button>
+  </div>
+
+  <div *ngIf="op == '1'">
+    <ul *ngFor="let e of enteros">
+      <li>{{e}}</li>
+    </ul>
+  </div>
+
+  <div *ngIf="op == '2'">
+    <p>Se crea un número aleatorio y si es impar se muestra en la consola</p>
+  </div>
+
+  <div *ngIf="op == '3'">
+    <div class="row">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+    </div>
+    <div class="row">
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+    </div>
+  </div>
+</div>
